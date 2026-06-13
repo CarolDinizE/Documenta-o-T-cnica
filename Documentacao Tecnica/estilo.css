@@ -88,12 +88,9 @@ code {
     padding: 15px;
     border-radius: 6px;
     margin: 20px 0;
-    border-left: 4px solid #00adb5;
-    white-space: pre-wrap;
     font-size: 0.95rem;
 }
 
-/* Media Query exigida para responsividade em telas menores */
 @media (max-width: 768px) {
     #navbar {
         position: relative;
