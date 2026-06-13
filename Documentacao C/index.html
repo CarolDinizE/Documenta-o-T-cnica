@@ -1,13 +1,89 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>documentacao-c</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentação de Linguagem C</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <header>LINGUAGEM C</header>
+        <a class="nav-link" href="#Introdução_à_Lógica_e_Conceito_de_Algoritmo">Introdução à Lógica e Conceito de Algoritmo</a>
+        <a class="nav-link" href="#Programação_Estruturada">Programação Estruturada</a>
+        <a class="nav-link" href="#Constantes,_Variáveis_e_Tipos_de_Dados">Constantes, Variáveis e Tipos de Dados</a>
+        <a class="nav-link" href="#Entrada,_Saída_e_Operadores_Aritméticos">Entrada, Saída e Operadores Aritméticos</a>
+        <a class="nav-link" href="#Estruturas_Condicionais,_Relacionais_e_Lógicas">Estruturas Condicionais, Relacionais e Lógicas</a>
+        <a class="nav-link" href="#Estruturas_de_Repetição">Estruturas de Repetição</a>
+        <a class="nav-link" href="#Arrays,_Funções_e_Cadeias_de_Caracteres">Arrays, Funções e Cadeias de Caracteres</a>
+    </nav>
+
+    <main id="main-doc">
+
+        <section class="main-section" id="Introdução_à_Lógica_e_Conceito_de_Algoritmo">
+            <header>Introdução à Lógica e Conceito de Algoritmo</header>
+            <p>A <strong>Introdução à Lógica de Programação</strong> fundamenta todo o processo de desenvolvimento de software. Ela consiste no uso correto das leis do pensamento e do raciocínio humano aplicadas à estruturação de instruções que um sistema de computação consiga compreender de maneira lógica e sequencial. Dominar esse conceito permite que o programador organize suas ideias de forma clara antes mesmo de escrever as primeiras linhas de código em qualquer linguagem.</p>
+            <p>Intimamente ligado à lógica, temos o <strong>Conceito de Algoritmo</strong>. Um algoritmo funciona exatamente como uma receita de bolo bem detalhada: ele representa uma sequência finita de passos lógicos, ordenados e sem ambiguidades que têm como único objetivo resolver um problema ou executar uma tarefa específica. Na ciência da computação, os algoritmos servem de rascunho para a lógica que será implementada no computador.</p>
+            <p>No desenvolvimento de sistemas usando a linguagem C, criamos programas combinando essas regras formais de lógica com blocos estruturados de código, transformando as instruções lógicas em softwares funcionais de alto desempenho.</p>
+        </section>
+
+        <section class="main-section" id="Programação_Estruturada">
+            <header>Programação Estruturada</header>
+            <p>A <strong>Programação estruturada</strong> constitui um paradigma de desenvolvimento criado para organizar e simplificar a escrita de softwares. Esse modelo baseia-se fortemente na quebra de problemas complexos em pequenos blocos de comandos isolados. Ele foca o desenvolvimento em apenas três pilares básicos de controle: estruturas de sequência linear, estruturas de decisão (condições) e estruturas de iteração (loops).</p>
+            <p>Ao contrário dos estilos antigos de desenvolvimento que usavam saltos lógicos desordenados, a programação estruturada incentiva a criação de rotinas limpas, facilitando a manutenção e a leitura do código por outros desenvolvedores. Na linguagem C, implementamos esse conceito criando funções modulares que conversam entre si.</p>
+            <p>Qualquer programa clássico escrito em C precisa, obrigatoriamente, possuir uma função inicial bem definida. É a partir dessa estrutura que o sistema operacional sabe onde a execução deve começar:</p>
+            <code>int main() {
+    // As instruções do seu algoritmo ficam aqui dentro<br>
+    return 0;<br>
+}</code>
+        </section>
+
+        <section class="main-section" id="Constantes,_Variáveis_e_Tipos_de_Dados">
+            <header>Constantes, Variáveis e Tipos de Dados</header>
+            <p><strong>Constantes e variáveis</strong> são elementos que representam espaços reservados diretamente na memória RAM do computador para fins de armazenamento temporário de dados. Uma variável é um identificador cujo valor salvo pode sofrer alterações dinâmicas conforme as instruções do programa rodam. Por outro lado, as constantes armazenam um valor imutável, definido no início do código, que o sistema não pode alterar em nenhuma hipótese.</p>
+            <p>Para criar essas caixas de armazenamento, a linguagem exige a definição dos <strong>Tipos de dados</strong> correspondentes. O tipo avisa ao sistema operacional quanta memória RAM deve ser separada para aquela informação. Veja a lista com os tipos primitivos fundamentais disponíveis nativamente em C:</p>
+            <ul>
+                <li><strong>int:</strong> Tipo de dado específico para o armazenamento de números inteiros positivos ou inteiros negativos.</li>
+                <li><strong>float:</strong> Utilizado para armazenar números reais com casas decimais (ponto flutuante com precisão simples).</li>
+                <li><strong>double:</strong> Destinado a números reais decimais extensos que exigem uma precisão muito maior de armazenamento.</li>
+                <li><strong>char:</strong> O menor tipo de dado nativo, reservado para guardar um único caractere textual ou símbolo da tabela ASCII.</li>
+            </ul>
+            <p>O processo de criação de uma variável obedece a uma sintaxe estrita: definimos primeiro o tipo e depois damos um nome único para o identificador. Confira no exemplo prático:</p>
+            <code>int idade = 19;<br>
+float altura = 1.65;<br>
+const double PI = 3.14159;</code>
+        </section>
+
+        <section class="main-section" id="Entrada,_Saída_e_Operadores_Aritméticos">
+            <header>Entrada, Saída e Operadores Aritméticos</header>
+            <p>As rotinas de <strong>Entrada e saída</strong> de dados permitem que o nosso programa interaja diretamente com o mundo externo, recebendo comandos através do usuário ou exibindo resultados processados de volta na tela. Como a linguagem C não possui comandos nativos em seu núcleo, recorremos à biblioteca padrão para disponibilizar essas ferramentas essenciais.</p>
+            <p>Além da manipulação das informações de entrada e saída, usamos constantemente os <strong>Operadores aritméticos</strong> no código. Eles realizam as operações matemáticas tradicionais com as variáveis e valores numéricos do sistema. A lista abaixo apresenta os principais comandos e símbolos de cálculo usados no dia a dia:</p>
+            <ul>
+                <li><strong>printf():</strong> Função responsável pela saída de dados, exibindo mensagens e resultados formatados na tela do monitor.</li>
+                <li><strong>scanf():</strong> Função de entrada, responsável por pausar a execução do sistema para ler o que o usuário digita no teclado.</li>
+                <li><strong>+ e -:</strong> Operadores matemáticos padrão para efetuar somas e subtrações matemáticas básicas.</li>
+                <li><strong>* e /:</strong> Operadores matemáticos utilizados para efetuar multiplicações e divisões dentro do código.</li>
+                <li><strong>%:</strong> Operador aritmético especial responsável por calcular o resto exato de uma divisão entre dois números inteiros.</li>
+            </ul>
+            <p>O exemplo abaixo demonstra como capturar um número inteiro digitado pelo teclado do usuário e exibir o valor logo em seguida:</p>
+            <code>printf("Digite o seu ano de nascimento: ");<br>
+scanf("%d", &ano);<br>
+printf("Você digitou o ano %d", ano);</code>
+        </section>
+
+        <section class="main-section" id="Estruturas_Condicionais,_Relacionais_e_Lógicas">
+            <header>Estruturas Condicionais, Relacionais e Lógicas</header>
+            <p>As <strong>Estruturas condicionais</strong> mudam o comportamento do programa criando bifurcações no fluxo de processamento. Em vez do código rodar apenas de cima para baixo de forma engessada, as condicionais forçam o computador a tomar decisões com base no resultado verdadeiro ou falso de um teste lógico pré-determinado.</p>
+            <p>Para construir essas validações, aplicamos os <strong>Operadores relacionais</strong>. Eles fazem testes matemáticos de comparação direta entre dois valores ou variáveis, devolvendo um resultado lógico. O C usa símbolos como dois sinais de igual para checar igualdades, um ponto de exclamação e um igual para diferenças, além dos sinais de maior e menor.</p>
+            <p>Quando a tomada de decisão envolve mais de uma regra, entram em ação os <strong>Operadores lógicos</strong>. Eles servem para fundir ou inverter múltiplos testes relacionais. Usamos o operador de E lógico (&&) que exige que todas as condições sejam verdadeiras, o operador de OU lógico (||) que exige apenas uma condição verdadeira, e o operador de NÃO lógico (!) que inverte o estado lógico atual.</p>
+            <code>if (idade >= 18 && temCarteira == 1) {<br>
+    printf("Acesso autorizado!");<br>
+} <br>else {<br>
+    printf("Acesso negado.");<br>
+}</code>
+        </section>
+
+        <section class="main-section" id="Estruturas_de_Repetição">
+            <header>Estruturas de Repetição</header>
+            <p>As <strong>Estruturas de repetição</strong>, comumente chamadas de laços ou loops, servem para rodar um bloco específico de instruções múltiplas vezes automáticas, sem a necessidade de reescrever o mesmo código repetidamente. A repetição continua acontecendo em ciclo enquanto uma determinada condição lógica de teste se mantiver como verdadeira.</p>
