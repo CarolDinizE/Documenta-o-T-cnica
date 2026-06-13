@@ -4,10 +4,88 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>documentacao-tecnica</title>
+    <title>Documentacao-tecnica</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <nav id="navbar">
+        <header>Doc Linguagem C</header>
+        <a class="nav-link" href="#Introducao_a_Logica_e_Algoritmos">Introdução à Lógica e Algoritmos</a>
+        <a class="nav-link" href="#Programacao_Estruturada">Programação Estruturada</a>
+        <a class="nav-link" href="#Variaveis_Constantes_e_Tipos">Variáveis Constantes e Tipos</a>
+        <a class="nav-link" href="#Entrada_Saida_e_Operadores">Entrada Saída e Operadores</a>
+        <a class="nav-link" href="#Estruturas_Condicionais_e_Logicas">Estruturas Condicionais e Lógicas</a>
+        <a class="nav-link" href="#Estruturas_de_Repeticao">Estruturas de Repetição</a>
+        <a class="nav-link" href="#Arrays_Strings_e_Funcoes">Arrays Strings e Funções</a>
+    </nav>
+
+    <main id="main-doc">
+        <section class="main-section" id="Introducao_a_Logica_e_Algoritmos">
+            <header>Introdução à Lógica e Algoritmos</header>
+            <p>A lógica de programação é o modelo de raciocínio necessário para desenvolver instruções que o computador possa executar de forma eficaz.</p>
+            <p>O conceito de algoritmo define-se como uma sequência finita de passos lógicos e bem definidos que resolvem um problema específico.</p>
+            <p>Em C, expressamos esses algoritmos através de blocos de códigos que são compilados diretamente em linguagem de máquina.</p>
+        </section>
+
+        <section class="main-section" id="Programacao_Estruturada">
+            <header>Programação Estruturada</header>
+            <p>A programação estruturada visa simplificar o desenvolvimento de software através de três estruturas básicas: sequência, decisão e iteração.</p>
+            <p>Este paradigma elimina o uso de saltos condicionais desordenados, organizando o código em funções modulares e legíveis.</p>
+            <p>Um exemplo clássico de estrutura inicial em um programa C é a função principal descrita abaixo:</p>
+            <code>int main() { return 0; }</code>
+        </section>
+
+        <section class="main-section" id="Variaveis_Constantes_e_Tipos">
+            <header>Variáveis Constantes e Tipos</header>
+            <p>Variáveis são posições reservadas na memória RAM para armazenar dados que podem ser modificados durante a execução do programa.</p>
+            <p>As constantes são valores fixos definidos no início do código que não podem sofrer alterações posteriores pelo sistema.</p>
+            <p>Os tipos de dados primitivos mais comuns na linguagem C e suas finalidades são:</p>
+            <ul>
+                <li><strong>int:</strong> Armazena números inteiros positivos ou negativos.</li>
+                <li><strong>float:</strong> Utilizado para números reais com precisão simples de ponto flutuante.</li>
+                <li><strong>double:</strong> Destinado a números reais com dupla precisão.</li>
+                <li><strong>char:</strong> Armazena um único caractere de texto ou símbolo.</li>
+            </ul>
+            <p>Para declarar uma variável em C, basta informar o tipo seguido pelo nome desejado:</p>
+            <code>int idade = 25;</code>
+        </section>
+
+        <section class="main-section" id="Entrada_Saida_e_Operadores">
+            <header>Entrada Saída e Operadores</header>
+            <p>A entrada e saída de dados em C é realizada por meio de funções integradas na biblioteca padrão padrão de I/O.</p>
+            <p>Os operadores aritméticos manipulam esses dados e realizam os cálculos matemáticos essenciais exigidos pela aplicação.</p>
+            <p>Abaixo estão os operadores e funções fundamentais de manipulação de dados:</p>
+            <ul>
+                <li><strong>printf:</strong> Exibe dados formatados diretamente na tela do usuário.</li>
+                <li><strong>scanf:</strong> Captura as entradas digitadas pelo usuário no teclado.</li>
+                <li><strong>%:</strong> Operador que calcula o resto da divisão inteira.</li>
+            </ul>
+            <p>Veja como realizar a leitura de um número inteiro utilizando comandos nativos:</p>
+            <code>scanf("%d", &numero);</code>
+        </section>
+
+        <section class="main-section" id="Estruturas_Condicionais_e_Logicas">
+            <header>Estruturas Condicionais e Lógicas</header>
+            <p>As estruturas condicionais direcionam o fluxo de execução baseando-se no resultado lógico de uma ou mais expressões.</p>
+            <p>Os operadores relacionais realizam comparações de igualdade e grandeza entre duas variáveis distintas do programa.</p>
+            <p>Os operadores lógicos combinam múltiplos testes de condições para formar uma regra de decisão mais complexa.</p>
+            <code>if (X &gt; 0 &amp;&amp; Y &lt; 10) { }</code>
+        </section>
+
+        <section class="main-section" id="Estruturas_de_Repeticao">
+            <header>Estruturas de Repetição</header>
+            <p>As estruturas de repetição criam loops que executam um bloco de comandos repetidas vezes enquanto uma condição for verdadeira.</p>
+            <p>O gerenciamento correto dessas repetições evita o travamento do sistema causado por loops infinitos indesejados.</p>
+            <p>A linguagem possui três loops principais: o laço for, o laço while e o laço do-while.</p>
+            <code>while (contador &lt; 10) { contador++; }</code>
+        </section>
+
+        <section class="main-section" id="Arrays_Strings_e_Funcoes">
+            <header>Arrays Strings e Funções</header>
+            <p>Arrays unidimensionais (vetores) e multidimensionais (matrizes) agrupam variáveis do mesmo tipo em uma estrutura de dados indexada.</p>
+            <p>As strings em C são tratadas nativamente como um vetor de caracteres terminado obrigatoriamente com o caractere nulo.</p>
+            <p>Funções matemáticas complexas como raiz quadrada ou potenciação podem ser acessadas importando a biblioteca matemática padrão.</p>
+            <code>char nome[] = "Linguagem C";</code>
+        </section>
+    </main>
   </body>
 </html>
